@@ -19,15 +19,11 @@ Tools Used: Power BI
 
 ### Objective:
 ### What is this project about? 
- 
-- Provide a brief introduction to the project. Define the problem statement/ business question that this project will show and why it is important.
-- Write in bullet point format
 
- _Example:_
+ This project analyzes sales situation at SuperStore Company using Power BI. The objective is:
 
- This project analyzes sales trends and inventory control using SQL and Power BI. The objective is
-✔️ Identify high-demand products and sales trends.  
-✔️ Optimize inventory levels to prevent overstocking or stockouts.  
+✔️ Identify the overview sales scenario, with key metric Net Revenue.  
+✔️ Identify potential markets and strategic product to expand market.  
 ✔️ Provide actionable insights through Power BI dashboards.  
 
 ### Who is this project for?  
@@ -41,27 +37,86 @@ Tools Used: Power BI
 
 ### Data Source  
 - Source: (Mention where the dataset is obtained from—Kaggle, company database, government sources, etc.)  
-- Size: (Mention the number of rows & columns)  
-- Format: (.csv, .sql, .xlsx, etc.)  
+- Size: 3 tables, the fact table contains 51290 rows, 20 columns  
+- Format: .csv 
 
 ### 📊 Data Structure & Relationships  
 
-#### 1️⃣ Tables Used:  
-Mention how many tables are in the dataset.  
+#### 1️⃣ Tables Used: 3 tables
+| Table Name | Rows | Columns |  
+|----------|-------------|-------------| 
+| Orders       |51290  | 20 |
+| People       | 26 | 2 |
+| Returns      | 1172 | 2 |
 
 #### 2️⃣ Table Schema & Data Snapshot  
 
 **Table 1: Orders** 
 
+| Column        | Data Type | Description                                                             |
+|---------------|-----------|-------------------------------------------------------------------------|
+| Order ID      | String    | Unique identifier for each order placed.                                |
+| Order Date    | Date      | Date when the order was placed.                                         |
+| Ship Date     | Date      | Date when the order was shipped.                                        |
+| Ship Mode     | String    | Shipping method used (e.g., Same Day, First Class).                     |
+| Customer ID   | String    | Unique identifier for each customer.                                    |
+| Customer Name | String    | Full name of the customer.                                              |
+| Segment       | String    | Customer segment (e.g., Consumer, Corporate, Home Office).              |
+| City          | String    | City of the customer.                                                   |
+| State         | String    | State or province of the customer.                                      |
+| Country       | String    | Country of the customer.                                                |
+| Postal Code   | String    | Postal code of the customer’s address.                                  |
+| Market        | String    | Market region (e.g., US, EU, APAC, Africa).                             |
+| Region        | String    | Sub-region within the market (e.g., East, Central, Oceania).            |
+| Product ID    | String    | Unique identifier for the product sold.                                 |
+| Category      | String    | High-level classification of the product (e.g., Furniture, Technology). |
+| Sub-Category  | String    | More specific classification under the main category.                   |
+| Product Name  | String    | Full name or description of the product.                                |
+| Sales         | Float     | Total sales amount for the line item (in local currency).               |
+| Quantity      | Integer   | Number of units sold.                                                   |
+| Profit        | Float     | Profit earned from the transaction. May be negative if there is a loss. |
+
+| Order ID        | Order Date | Ship Date  | Ship Mode    | Customer ID | Customer Name    | Segment     | City          | State           | Country       | Postal Code | Market  | Region           | Product ID      | Category   | Sub-Category                              | Product Name                                                       | Sales   | Quantity | Profit   |
+|-----------------|------------|------------|--------------|-------------|------------------|-------------|---------------|-----------------|---------------|-------------|---------|------------------|-----------------|------------|-------------------------------------------|--------------------------------------------------------------------|---------|----------|----------|
+| CA-2012-124891  | 7/31/2012  | 7/31/2012  | Same Day     | RH-19495    | Rick Hansen      | Consumer    | New York City | New York        | United States | 10024       | US      | East             | TEC-AC-10003033 | Technology | Accessories                               | Plantronics CS510 - Over-the-Head monaural Wireless Headset System | 2309.65 | 7        | 762.1845 |
+| IN-2013-77878   | 2/5/2013   | 2/7/2013   | Second Class | JR-16210    | Justin Ritter    | Corporate   | Wollongong    | New South Wales | Australia     | APAC        | Oceania | FUR-CH-10003950  | Furniture       | Chairs     | Novimex Executive Leather Armchair, Black | 3709.395                                                           | 9       | -288.765 |          |
+| IN-2013-71249   | 10/17/2013 | 10/18/2013 | First Class  | CR-12730    | Craig Reiter     | Consumer    | Brisbane      | Queensland      | Australia     | APAC        | Oceania | TEC-PH-10004664  | Technology      | Phones     | Nokia Smart Phone, with Caller ID         | 5175.171                                                           | 9       | 919.971  |          |
+| ES-2013-1579342 | 1/28/2013  | 1/30/2013  | First Class  | KM-16375    | Katherine Murray | Home Office | Berlin        | Berlin          | Germany       | EU          | Central | TEC-PH-10004583  | Technology      | Phones     | Motorola Smart Phone, Cordless            | 2892.51                                                            | 5       | -96.54   |          |
+| SG-2013-4320    | 11/5/2013  | 11/6/2013  | Same Day     | RH-9495     | Rick Hansen      | Consumer    | Dakar         | Dakar           | Senegal       | Africa      | Africa  | TEC-SHA-10000501 | Technology      | Copiers    | Sharp Wireless Fax, High-Speed            | 2832.96                                                            | 8       | 311.52   |          |
 
 **Table 2: People** 
 
+| Column Name  | Data Type        | Description|
+| ------------ | ---------------- | -------------|
+| Person         | char        | Person in charge of each region     |
+| Region         | char   | Market region (ex: Canada, AMEA,..)         |
+
+| Person         | Region  |
+|----------------|---------|
+| Anna Andreadi  | Central |
+| Chuck Magee    | South   |
+| Kelly Williams | East    |
+| Matt Collister | West    |
 
 **Table 3: Returns**
 
+| Column Name  | Data Type        | Description|
+| ------------ | ---------------- | -------------|
+| Returned         | char        |is-returned order (Yes/No)     |
+| Order ID         | char   | order ID        |
+
+| Returned | Order ID        |
+|----------|-----------------|
+| Yes      | MX-2013-168137  |
+| Yes      | US-2011-165316  |
+| Yes      | ES-2013-1525878 |
+| Yes      | CA-2013-118311  |
+| Yes      | ES-2011-1276768 |
+
 
 #### 3️⃣ Data Relationships:  
-👉🏻 Include a screenshot of Data Modeling to visualize relationships.  
+
+![ERD diagram](https://github.com/Channpate/Power-BI--Sales-Tactical-Dashboard--SuperStore-Global-Retailer/blob/ead8cf148ca9b803a097bbcc56607961032d663e/PJ2-ERD.png)
 
 ---
 
@@ -80,18 +135,9 @@ Explain the step-by-step approach taken to solve the problem.
 
 ## ⚒️ Main Process
 
-1️⃣ Data Cleaning & Preprocessing 
-2️⃣ Exploratory Data Analysis (EDA)  
-3️⃣ SQL/ Python Analysis 
-
-- In each step, show your Code
-
-- Include query/ code execution screenshots or result samples
-
-- Explain its purpose and its findings
-
-
-4️⃣ Power BI Visualization  (applicable for PBI Projects)
+1️⃣ Data Cleaning & Preprocessing with Power Query 
+2️⃣ Data Modeling and Create measures, parameters with DAX
+3️⃣ Visualize dashboard 
 
 ---
 

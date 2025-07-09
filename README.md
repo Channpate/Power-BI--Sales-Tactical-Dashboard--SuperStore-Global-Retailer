@@ -122,21 +122,27 @@ Tools Used: Power BI
 
 ## 🧠 Design Thinking Process  
 
-Explain the step-by-step approach taken to solve the problem.  
-
-👉🏻 Insert a screenshot of the Design Thinking steps (Screenshot your Excel design thinking tables for better presentation).  
-
 1️⃣ Empathize  
+
+![STAGE 1 DESIGN THINKING](https://github.com/Channpate/Power-BI--Sales-Tactical-Dashboard--SuperStore-Global-Retailer/blob/4500c82e05b6239715ee94d4231f2d5d81345dc6/Dashboard%20Capture/pj2-design-thinking-stage1.png)
+
 2️⃣ Define point of view  
+
+![STAGE 2 DESIGN THINKING](https://github.com/Channpate/Power-BI--Sales-Tactical-Dashboard--SuperStore-Global-Retailer/blob/4500c82e05b6239715ee94d4231f2d5d81345dc6/Dashboard%20Capture/pj2-design-thinking-stage2.png)
+
 3️⃣ Ideate  
-4️⃣ Prototype and review  
+
+![STAGE 3 DESIGN THINKING](https://github.com/Channpate/Power-BI--Sales-Tactical-Dashboard--SuperStore-Global-Retailer/blob/14a2724bbeba2af0b2a185f43609cbdd9dd6e2d6/Dashboard%20Capture/pj2-design-thinking-stage3.png)
+
 
 ---
 
 ## ⚒️ Main Process
 
 1️⃣ Data Cleaning & Preprocessing with Power Query 
+
 2️⃣ Data Modeling and Create measures, parameters with DAX
+
 3️⃣ Visualize dashboard 
 
 ---
